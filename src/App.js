@@ -1,70 +1,30 @@
 import logo from "./logo.svg";
 import "./App.css";
 
-const number = 5555;
-const singers = [
-  { name: "Dr. Mahfuz", age: 50, job: "singer" },
-  { name: "Eva Rahman", age: 50, job: "singer2" },
-  { name: "Agun", age: 50, job: "sopno" },
-  { name: "Shuvro", age: 50, job: "pathor" },
-];
-
-const singerStyle = {
-  color: "purple",
-  backgroundColor: "white",
-};
-
 function App() {
-  const nayoks = [
-    "Rubel",
-    "BappaDa",
-    "Kuber",
-    "Jashim",
-    "Salman shah",
-    "Riyaz",
-    "Razzak",
-    "Anwar",
+  const products = [
+    { name: "laptop00", price: 153000 },
+    { name: "phone", price: 93000 },
+    { name: "watch", price: 33000 },
+    { name: "tablet", price: 5000 },
   ];
   return (
     <div className="App">
-      {/* {nayoks.map((nayok) => (
-        <>
-          <li>{nayok}</li>
-          <Person name={nayok} nayika="moushumi"></Person>
-        </>
-      ))} */}
-
-      {singers.map((singer) => (
-        <Person name={singer.name} nayika="moushumi"></Person>
+      {products.map((product) => (
+        <Product name={product.name} price={product.price}></Product>
       ))}
-
-      {/* <Person name={nayoks[1]} nayika="cheka"></Person>
-      <Person name={nayoks[2]} nayika="Kopila"></Person> */}
-      {/* <h5>New component. yehhhh</h5>
-      <p>Rock mama react mama.</p>
-      <Friend movie="Shingham" phone="01777"></Friend>
-      <Friend movie="Chak de" phone="01999"></Friend> */}
+      {/* <Product name="laptop" price="47000"></Product>
+      <Product name="phone" price="75000"></Product> */}
+      {/* <Product name="watch" price="3500"></Product> */}
     </div>
   );
 }
 
-const Person = (props) => {
-  // console.log(props);
-  // console.log(props.name);
+function Product(props) {
   return (
-    <div className="person">
-      <h1>{props.name}</h1>
-      <p>Nayika: {props.nayika}</p>
-    </div>
-  );
-};
-
-function Friend(props) {
-  console.log(props);
-  return (
-    <div className="container">
-      <h3>Name: {props.movie}</h3>
-      <p>phone: {props.phone}</p>
+    <div className="product">
+      <h3>Name: {props.name}</h3>
+      <p>Price: {props.price}</p>
     </div>
   );
 }
