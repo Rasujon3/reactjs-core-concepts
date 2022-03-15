@@ -2,8 +2,12 @@ import logo from "./logo.svg";
 import "./App.css";
 
 const number = 5555;
-const singer = { name: "Dr. Mahfuz", age: 50, job: "singer" };
-const singer2 = { name: "Eva Rahman", age: 50, job: "singer2" };
+const singers = [
+  { name: "Dr. Mahfuz", age: 50, job: "singer" },
+  { name: "Eva Rahman", age: 50, job: "singer2" },
+  { name: "Agun", age: 50, job: "sopno" },
+  { name: "Shuvro", age: 50, job: "pathor" },
+];
 
 const singerStyle = {
   color: "purple",
@@ -11,15 +15,35 @@ const singerStyle = {
 };
 
 function App() {
+  const nayoks = [
+    "Rubel",
+    "BappaDa",
+    "Kuber",
+    "Jashim",
+    "Salman shah",
+    "Riyaz",
+    "Razzak",
+    "Anwar",
+  ];
   return (
     <div className="App">
-      <Person name="Rubel" nayika="moushumi"></Person>
-      <Person name="BappaRaz" nayika="cheka"></Person>
-      <Person name="Kuber" nayika="Kopila"></Person>
-      <h5>New component. yehhhh</h5>
+      {/* {nayoks.map((nayok) => (
+        <>
+          <li>{nayok}</li>
+          <Person name={nayok} nayika="moushumi"></Person>
+        </>
+      ))} */}
+
+      {singers.map((singer) => (
+        <Person name={singer.name} nayika="moushumi"></Person>
+      ))}
+
+      {/* <Person name={nayoks[1]} nayika="cheka"></Person>
+      <Person name={nayoks[2]} nayika="Kopila"></Person> */}
+      {/* <h5>New component. yehhhh</h5>
       <p>Rock mama react mama.</p>
       <Friend movie="Shingham" phone="01777"></Friend>
-      <Friend movie="Chak de" phone="01999"></Friend>
+      <Friend movie="Chak de" phone="01999"></Friend> */}
     </div>
   );
 }
